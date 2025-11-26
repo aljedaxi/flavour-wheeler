@@ -1,2 +1,2 @@
-twinnings.json: twinnings.yaml
+%.json: %.yaml
 	@yaml2json < $< > $@

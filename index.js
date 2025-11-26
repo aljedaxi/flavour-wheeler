@@ -1,6 +1,6 @@
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 import _ from "https://cdn.jsdelivr.net/npm/lodash/+esm";
-import twinnings from "./twinnings.json" with { type: "json" };
+import twinnings from "./chinese-tea-tasting-terms.json" with { type: "json" };
 
 class Flavour {
   from = (...all) => new Flavour(...all);

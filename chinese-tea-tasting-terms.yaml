@@ -1,5 +1,46 @@
-Herbaceous Green:
-  Fresh herbaceous:
+herbaceous green:
+  aromatic herbs:
+    basil:
+    mint:
+    bay leaves:
+    coriander:
+    sage:
+    dill:
+  cooked vegetable:
+    artichoke:
+    spinach:
+    french beans:
+    zucchini:
+    cooked vegetables:
+    raw vegetables:
+  dried herbaceous:
+    hay:
+    wicker:
+    straw:
+    tobacco:
+    malty:
+    coumarin (resembling new-mown hay):
+  mineral:
+    metallic:
+    hot metal:
+    silica:
+    flint:
+  gamy:
+    leather:
+    saddlery:
+    horse:
+    big cat:
+    musk:
+    damp wool:
+    sweat:
+    manure:
+    stable:
+    tannery:
+    menagerie:
+    cat urine:
+    indole:
+    truffle:
+  fresh herbaceous:
     green stems:
     privet:
     freshly mown grass:
@@ -7,72 +48,8 @@ Herbaceous Green:
     sorrel:
     watercress:
     cultivated mushrooms:
-  Aromatic herbs:
-    basil:
-    mint:
-    bay leaves:
-    coriander:
-    sage:
-    dill:
-  Cooked vegetable:
-    artichoke:
-    spinach:
-    French beans:
-    zucchini:
-    cooked vegetables:
-    raw vegetables:
-  Dried herbaceous:
-    hay:
-    wicker:
-    straw:
-    tobacco:
-    malty:
-    coumarin (resembling new-mown hay):
-Marine:
-  Shellfish:
-    winkles:
-    mussels:
-    oysters:
-    whelks:
-  Crustaceans:
-    crab:
-    velvet crab:
-    crab claws:
-  Fish:
-    salmon meat:
-    fish skin:
-  Others:
-    iodine:
-    seaweed:
-    kelp:
-Floral:
-  Fresh Floral:
-    fresh roses:
-    orange blossom:
-    peony:
-    geranium:
-    hyacinth:
-    freesia:
-    lily of the valley:
-    lilac:
-    narcissus:
-  White flowers:
-    jasmine:
-    daisy:
-    marguerite:
-    mimosa:
-    wisteria:
-    lily:
-    osmanthus (a native Chinese species):
-  Exotic flowers:
-    frangipani (the Temple tree of Hawaii):
-    orchid:
-    Tahitian gardenia:
-    magnolia:
-    ylang-ylang (from the cananga odorata tree):
-    Rose absolute (Rosa damascena):
-Fruity:
-  Orchid Fruits:
+fruity:
+  orchid fruits:
     pear:
     apple:
     quince:
@@ -82,25 +59,25 @@ Fruity:
     grape:
     peach:
     apricot:
-  Berries:
+  berries:
     strawberry:
     raspberry:
     blackcurrant:
     blackberry:
     black fruit:
     red fruit:
-  Exotic fruit:
+  exotic fruit:
     mango:
     passion fruit:
     lychee:
     kiwi:
-  Citrus fruit:
+  citrus fruit:
     zest:
     lemon:
     orange:
     mandarin orange:
     bergamot orange:
-  Cooked fruit:
+  cooked fruit:
     prune:
     date:
     fruit jam:
@@ -109,103 +86,128 @@ Fruity:
     raisin:
     currant:
     cherry stone:
-  Nuts:
+  nuts:
     green almonds:
     bitter almonds:
     chestnuts:
     hazelnuts:
     walnuts:
     horse chestnuts:
-Spicy:
-  Mild spices:
+floral:
+  fresh floral:
+    fresh roses:
+    orange blossom:
+    peony:
+    geranium:
+    hyacinth:
+    freesia:
+    lily of the valley:
+    lilac:
+    narcissus:
+  white flowers:
+    jasmine:
+    daisy:
+    marguerite:
+    mimosa:
+    wisteria:
+    lily:
+    osmanthus:
+  exotic flowers:
+    frangipani:
+    orchid:
+    tahitian gardenia:
+    magnolia:
+    ylang-ylang:
+    rose-absolute:
+spicy:
+  mild spices:
     cinnamon:
     licorice:
     vanilla:
     anise:
     nutmeg:
-  Hot spices:
+  hot spices:
     clove:
     cardamom:
     pepper:
-Dairy:
-  Fresh butter:
-  melted butter:
-  cream:
-  milk:
-  condensed milk:
-Sweet:
-  Vanilla:
-  Vanilla sugar:
-  honey:
-  wax:
-  pollen:
-Rich:
-  Chocolate:
-  cocoa:
-  mocha:
-  sweetened chestnut puree:
-  frangipane:
-  caramelized apple:
-  caramel:
-  jam:
-Undergrowth:
-  Humus:
-  damp leaves:
-  moss:
-  patchouli:
-Earthy:
-  Damp soil:
-  cellar:
-  mushroom:
-  mold:
-  dust:
-  stony:
-  wet earth after a storm:
-  peat:
-  saltpeter:
-Woody:
-  Woody:
-    Waxed wood:
+sweet:
+  spicy:
+    vanilla:
+    vanilla sugar:
+    honey:
+    wax:
+    pollen:
+  rich:
+    chocolate:
+    cocoa:
+    mocha:
+    sweetened chestnut puree:
+    frangipane:
+    caramelized apple:
+    caramel:
+    jam:
+  dairy:
+    fresh butter:
+    melted butter:
+    cream:
+    milk:
+    condensed milk:
+smokey:
+  burnt:
+    roasting coffee:
+    breadcrumbs:
+    bread crusts:
+    brioche:
+    toasted hazelnuts:
+    peanuts:
+    popcorn:
+  smoked:
+    bacon:
+    juniper:
+    tar:
+    hydrocarbons:
+marine:
+  shellfish:
+    winkles:
+    mussels:
+    oysters:
+    whelks:
+  crustaceans:
+    crab:
+    velvet crab:
+    crab claws:
+  fish:
+    salmon meat:
+    fish skin:
+  others:
+    iodine:
+    seaweed:
+    kelp:
+vegetal:
+  undergrowth:
+    humus:
+    damp leaves:
+    moss:
+    patchouli:
+  earthy:
+    damp soil:
+    cellar:
+    mushroom:
+    mold:
+    dust:
+    stony:
+    wet earth after a storm:
+    peat:
+    saltpeter:
+  woody:
+    waxed wood:
     dry wood:
     cedar:
     sandalwood:
-    vetiver (a relative of lemon grass):
+    lemon-grass:
     balsa wood:
     pine:
     arnica:
-  Woody with gamy notes:
+  woody with gamy notes:
     holly:
     blackcurrant leaves:
-Gamy:
-  Leather:
-  saddlery:
-  horse:
-  Big cat:
-  musk:
-  damp wool:
-  sweat:
-  Manure:
-  stable:
-  tannery:
-  menagerie:
-  Cat urine:
-  indole:
-  Truffle:
-Burnt:
-  Roasting coffee:
-  Breadcrumbs:
-  bread crusts:
-  brioche:
-  Toasted hazelnuts:
-  peanuts:
-  popcorn:
-Smoked:
-  Bacon:
-  juniper:
-  tar:
-  hydrocarbons:
-Mineral:
-  Metallic:
-  hot metal:
-  silica:
-  flint:

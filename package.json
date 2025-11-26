@@ -1,0 +1,23 @@
+{
+  "name": "flavour-wheeler",
+  "version": "1.0.0",
+  "description": "fun little web component to make flavour wheels",
+  "homepage": "https://github.com/aljedaxi/flavour-wheeler#readme",
+  "bugs": {
+    "url": "https://github.com/aljedaxi/flavour-wheeler/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aljedaxi/flavour-wheeler.git"
+  },
+  "license": "GPL-3.0-or-later",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "echarts": "^6.0.0"
+  }
+}

@@ -1,34 +1,23 @@
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 import _ from "https://cdn.jsdelivr.net/npm/lodash/+esm";
-import twinnings from "./chinese-tea-tasting-terms.json" with { type: "json" };
 
 class Flavour {
   from = (...all) => new Flavour(...all);
-  constructor(id, color, children) {
+  constructor(id, color, children, href) {
     this.id = id;
     const label = _.startCase(id);
-    Object.assign(this, { id, label });
+    Object.assign(this, { id, label, color, href });
     this.title = `title: ${label}`;
     this.children = children;
   }
 }
-const deTwin = (o) =>
-  Object.entries(o).map(([k, v]) =>
-    v === null ? new Flavour(k) : new Flavour(k, undefined, deTwin(v)),
-  );
-const twinningsData = {
-  name: "TODO",
-  children: deTwin(twinnings),
-};
-console.log(twinningsData.children);
+
 class FlavourWheel extends HTMLElement {
   constructor() {
     super();
   }
   constructChart = ({
     data,
-    link, // given a node d, its link (if any)
-    linkTarget = "_blank", // the target attribute for links (if any)
     width = 640, // outer width, in pixels
     height = 400, // outer height, in pixels
     margin = 1, // shorthand for margins
@@ -59,12 +48,8 @@ class FlavourWheel extends HTMLElement {
     d3.partition().size([endAngle - startAngle, radius])(root);
 
     // Construct a color scale.
-    if (color != null) {
-      color = d3
-        .scaleSequential([0, root.children.length], color)
-        .unknown(fill);
-      root.children.forEach((child, i) => (child.index = i));
-    }
+    color = d3.scaleSequential([0, root.children.length], color).unknown(fill);
+    root.children.forEach((child, i) => (child.index = i));
 
     // Construct an arc generator.
     const arc = d3
@@ -93,15 +78,14 @@ class FlavourWheel extends HTMLElement {
       .selectAll("a")
       .data(root.descendants())
       .join("a")
-      .attr("xlink:href", link == null ? null : (d) => link(d.data, d))
-      .attr("target", link == null ? null : linkTarget);
+      .attr("xlink:href", (d) => d.data.href);
 
     cell
       .append("path")
       .attr("d", arc)
       .attr(
         "fill",
-        color ? (d) => color(d.ancestors().reverse()[1]?.index) : fill,
+        (d) => d.data.color ?? color(d.ancestors().reverse()[1]?.index),
       )
       .attr("fill-opacity", fillOpacity);
 
@@ -122,25 +106,24 @@ class FlavourWheel extends HTMLElement {
     return svg;
   };
   childFlavourNodes = (e) =>
-    e.childNodes.values().filter((e) => e.tagName === "FLAVOUR");
-  childFlavours = (e) =>
-    this.childFlavourNodes(e).map(
-      (e) => new Flavour(e.id, undefined, this.childFlavours(e)),
-    );
+    e.childNodes.values().filter((e) => e.tagName === "OPTION");
   get flavours() {
-    return this.childFlavours(this);
+    return this.childFlavourNodes(this).map(
+      (e) => new Flavour(e.label, e.value, [], e.getAttribute("href")),
+    );
   }
   connectedCallback() {
     const {
       parentElement: { offsetHeight, offsetWidth },
     } = this;
     const chart = this.constructChart({
-      data: twinningsData,
+      data: { children: this.flavours, color: "white" },
       height: offsetHeight,
       width: offsetWidth,
     });
     const chartElement = chart.node();
     chartElement.setAttribute("preserveAspectRation", "xMidYMid meet");
+    this.innerHTML = "";
     this.prepend(chartElement);
     // window.addEventListener('resize', this.handleResize)
   }

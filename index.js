@@ -140,7 +140,7 @@ class FlavourWheel extends HTMLElement {
       width: offsetWidth,
     });
     const chartElement = chart.node();
-      chartElement.setAttribute('preserveAspectRation', 'xMidYMid meet')
+    chartElement.setAttribute("preserveAspectRation", "xMidYMid meet");
     this.prepend(chartElement);
     // window.addEventListener('resize', this.handleResize)
   }
